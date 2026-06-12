@@ -1,7 +1,5 @@
-import { REPO_URL } from '@/constants/project';
 import { useSupportUrl } from '@/hooks/useUserData';
 import { useTranslation } from 'react-i18next';
-import { Separator } from '@/components/ui/separator';
 import type { FC } from 'react';
 
 const FooterContent = () => {
@@ -23,15 +21,6 @@ const FooterContent = () => {
           {t('userInfo.supportUrl')}
         </a>
       )}
-      {supportUrl && (
-        <Separator className="w-16" />
-      )}
-      <p className="inline-block flex-grow text-center text-sm text-muted-foreground lg:px-4">
-        Made with ❤️ by &nbsp;
-        <a className="text-primary hover:text-primary/80 transition-colors" href={REPO_URL} target="_blank" rel="noopener noreferrer">
-          PasarGuard Team
-        </a>
-      </p>
     </div>
   );
 };
